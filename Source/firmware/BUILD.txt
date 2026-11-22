@@ -1,0 +1,5 @@
+GMX BC-250 Controller Wake - Rev 1 - how the firmware was built
+Pico SDK 2.2.0 (with submodules), arm-none-eabi-gcc 13.2.1
+  cmake -S . -B build_pico_w  -G Ninja -DPICO_BOARD=pico_w  -DCMAKE_BUILD_TYPE=Release && ninja -C build_pico_w
+  cmake -S . -B build_pico2_w -G Ninja -DPICO_BOARD=pico2_w -DCMAKE_BUILD_TYPE=Release && ninja -C build_pico2_w
+btstack_config.h is the standard pico-examples (sdk-2.2.0) pico_w/bt/config file.
