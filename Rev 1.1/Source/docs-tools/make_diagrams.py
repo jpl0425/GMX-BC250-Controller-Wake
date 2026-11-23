@@ -386,7 +386,7 @@ def fig_parts():
     b += text(800, 340, "SOD-323: the painted BAND end is the cathode.", 15, anchor="middle")
     b += text(800, 365, "Band end points TOWARD the Pico (VSYS).", 15, "bold", "middle", C["red"])
     b += text(W/2, 470, "Tip: tack SOT-23 parts onto a SOT-23-to-DIP adapter or solder thin wires to them directly.", 16, anchor="middle", italic=True, fill="#333")
-    return svg(W, H, b, "Part orientation  (on-hand surface-mount parts)")
+    return svg(W, H, b, "Part orientation  (surface-mount parts)")
 
 save("Fig1_Overview", fig_overview())
 save("Fig2_Wiring", fig_wiring())

@@ -64,9 +64,9 @@ s += [Spacer(1, 30), P("GMX BC-250 Controller Wake", TITLE), P("Rev 1  -  Build,
       P("Grumblymanx Mods", SUB), Spacer(1, 16)]
 s.append(note("<b>Please read first - what has and has NOT been tested</b><br/>"
               "- Both firmware files were compiled successfully and checked to be built for the right chip (Pico W = RP2040, Pico 2 W = RP2350).<br/>"
-              "- The firmware has <b>NOT</b> been run on real hardware yet. Your bench test (Section 5) is the first real test.<br/>"
+              "- The firmware has <b>NOT</b> been run on real hardware yet. Do the bench test (Section 5) before installing anything.<br/>"
               "- The wake method (listen for the controller's Bluetooth LE broadcast, then press the power button) comes from two "
-              "published ESP32 projects for the BC-250 (credits at the end). I have not tested it with your controller.<br/>"
+              "published ESP32 projects for the BC-250 (credits at the end). It has not yet been tested with this Pico firmware.<br/>"
               "- BC-250 pictures in this guide are <b>drawn illustrations</b>, not photos. Use the meter checks to confirm every BC-250 point before soldering."))
 s.append(Spacer(1, 10))
 s.append(P("What's in this guide", H2))
@@ -99,31 +99,28 @@ s += [P("2.  Choose your wiring option", H1),
               "Don't unplug or re-flash the Pico while the PC is running: the supply would switch off."]],
             [0.9 * inch, (W - 0.9 * inch) / 2, (W - 0.9 * inch) / 2]),
       Spacer(1, 6),
-      note("I have not picked one for you. If you are not sure, Option A is the simplest to get working first - you can add Q2 later "
+      note("Not sure which to pick? Option A is the simplest to get working first - you can add Q2 later "
            "and move to Option B without changing the firmware.", "#E3F2FD", "#1565C0")]
 
 # ---------------- 3 ----------------
 s += [P("3.  Parts list", H1),
-      P("I searched your <b>Xbox Stuff - All BOM Components.xlsx</b>. The parts below are listed there (the 'From' column is the project "
-        "folder the spreadsheet lists). <b>Please confirm you still physically have them before you start.</b>"),
-      table([["Ref", "Part", "Qty", "From (your spreadsheet)", "Notes"],
-             ["-", "Raspberry Pi Pico W  or  Pico 2 W", "1", "you have both", "Use the matching .UF2 file"],
-             ["Q1", "BSS138LT1G N-MOSFET, SOT-23 (LCSC C82045)", "1", "Anik recreated / Xblast Lite", "Power-button switch. Pins: 1 Gate, 2 Source, 3 Drain (onsemi datasheet)"],
-             ["Q2", "BSS138LT1G (same as Q1)", "1", "Anik recreated / Xblast Lite", "Option B only"],
-             ["R1, R2", "10k resistor 0603 (RC0603FR-0710KL, C98220)", "2", "Anik recreated / Xblast Lite", "R2 only for Option B"],
-             ["R3", "1k resistor 0603 (RC0603FR-071KL, C22548)", "1", "Anik recreated / Xblast Lite", "Protects the Pico input"],
-             ["D1", "1N5819WS Schottky diode, SOD-323 (C191023)", "1", "Darkone Customs (Pico ModXo)", "Band (cathode) toward Pico VSYS"],
-             ["R4", "470 ohm resistor 0805 (RC0805FR-07470RL)", "1", "OGX Mini / Anik recreated", "Optional status LED"],
-             ["LED1", "any LED", "1", "-", "Optional"],
-             ["SW1", "momentary push button", "1", "not in the spreadsheet", "Optional (BOOTSEL works too). Useful for Option B"],
-             ["-", "24-pin ATX breakout board or female 24-pin socket", "1", "not in the spreadsheet", "So you don't cut your power supply's cable"],
-             ["-", "Thin hook-up wire, perfboard, heat-shrink", "-", "-", ""]],
-            [0.55 * inch, 2.0 * inch, 0.45 * inch, 1.45 * inch, W - 4.45 * inch]),
+      table([["Ref", "Part", "Qty", "Notes"],
+             ["-", "Raspberry Pi Pico W  or  Pico 2 W", "1", "Use the matching .UF2 file"],
+             ["Q1", "BSS138LT1G N-MOSFET, SOT-23 (LCSC C82045)", "1", "Power-button switch. Pins: 1 Gate, 2 Source, 3 Drain (onsemi datasheet)"],
+             ["Q2", "BSS138LT1G (same as Q1)", "1", "Option B only"],
+             ["R1, R2", "10k resistor 0603 (RC0603FR-0710KL, LCSC C98220)", "2", "R2 only for Option B"],
+             ["R3", "1k resistor 0603 (RC0603FR-071KL, LCSC C22548)", "1", "Protects the Pico input"],
+             ["D1", "1N5819WS Schottky diode, SOD-323 (LCSC C191023)", "1", "Band (cathode) toward Pico VSYS"],
+             ["R4", "470 ohm resistor 0805 (RC0805FR-07470RL)", "1", "Optional status LED"],
+             ["LED1", "any LED", "1", "Optional"],
+             ["SW1", "momentary push button", "1", "Optional (BOOTSEL works too). Useful for Option B"],
+             ["-", "24-pin ATX breakout board or female 24-pin socket", "1", "So you don't cut your power supply's cable"],
+             ["-", "Thin hook-up wire, perfboard, heat-shrink", "-", ""]],
+            [0.6 * inch, 2.9 * inch, 0.45 * inch, W - 3.95 * inch]),
       Spacer(1, 6),
       note("The MOSFETs, resistors and diode are tiny surface-mount parts. Easiest: solder each SOT-23 MOSFET onto a "
-           "SOT-23-to-DIP adapter, or solder thin wires straight to the part. If you'd rather use through-hole parts, tell me "
-           "and I'll check stock and minimum order quantities before giving part numbers. I have not picked an ATX breakout "
-           "or push button part number yet for the same reason.", "#E3F2FD", "#1565C0"),
+           "SOT-23-to-DIP adapter, or solder thin wires straight to the part. No specific ATX breakout or push button is "
+           "required - any standard 24-pin ATX breakout and any momentary button will do.", "#E3F2FD", "#1565C0"),
       Spacer(1, 6), img("Fig6_Part_Orientation.png", 2.6 * inch)]
 s.append(PageBreak())
 
@@ -141,7 +138,7 @@ s += [P("4.  Flash the firmware (.UF2)", H1),
               "Drag the matching .UF2 file onto that drive. The drive disappears by itself when it's done - that's normal.",
               "The Pico restarts and runs the wake firmware. Its LED gives a <b>double flash every 2 seconds</b> (= running, no controller taught yet)."]),
       note("Wrong file? Nothing gets damaged - the board just won't run it. Repeat the steps with the other file. "
-           "Your old OGX-Mini firmware on that Pico will be replaced.")]
+           "Any firmware already on the Pico will be replaced.")]
 
 # ---------------- 5 ----------------
 s += [P("5.  Bench test + teach it your controller", H1),
@@ -165,7 +162,7 @@ s += [P("5.  Bench test + teach it your controller", H1),
       note("Optional: watch the Pico's log. Open Arduino IDE (or PuTTY), pick the Pico's COM port, Serial Monitor at 115200. "
            "You'll see lines like '[BT] saved controller ... heard -> turning PC on'.", "#E3F2FD", "#1565C0"),
       note("<b>Not verified:</b> the reference project says the controller must support Bluetooth LE. If the Pico never hears the "
-           "controller in this test, the controller's own firmware may matter - tell me what you see in the log and I'll look into it.")]
+           "controller in this test, the controller's own firmware may matter - check the Serial Monitor log to see what the Pico hears.")]
 s.append(PageBreak())
 
 # ---------------- 6 ----------------
@@ -209,7 +206,7 @@ s += [P("8.  Bazzite: make 'Sleep' shut down instead", H1),
       P("sudo ln -sf /usr/lib/systemd/system/poweroff.target /etc/systemd/system/suspend.target<br/>sudo systemctl daemon-reload", CODE),
       P("To undo it later:"),
       P("sudo rm /etc/systemd/system/suspend.target<br/>sudo systemctl daemon-reload", CODE),
-      note("These are the exact commands from those guides. I haven't run them on your machine. It asks for your password "
+      note("These are the exact commands from those guides; they have not been re-tested for this project. It asks for your password "
            "after 'sudo' - nothing shows while you type it, that's normal.")]
 
 # ---------------- 9 ----------------
@@ -253,7 +250,7 @@ s += [P("11.  Troubleshooting", H1),
              ["PC starts, then the Pico shows a long flash after 20 s", "The 'PC is on' signal isn't arriving: check TPMS1 pin 9 (meter: 3.3 V with PC on) and R3 to pin 6 GP4."],
              ["PC turns back on right after shutdown", "Controller still on after the 60 s ignore window. Switch the controller off when shutting down."],
              ["Option B: PC dies a few seconds after it starts", "The 'PC is on' signal isn't reaching the Pico, so it switches the supply off again. Fix strip 5."],
-             ["Something else", "Copy the Serial Monitor log (115200) and send it to me."]],
+             ["Something else", "Open the Serial Monitor log (115200 baud) - it prints every step the Pico takes."]],
             [2.1 * inch, W - 2.1 * inch])]
 
 # ---------------- 12 ----------------
