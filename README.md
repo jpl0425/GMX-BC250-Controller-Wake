@@ -1,4 +1,4 @@
-# GMX BC-250 Controller Wake (Rev 1.1)
+# GMX BC-250 Controller Wake (Rev 1.2)
 
 Grumblymanx Mods — turns an AMD BC-250 (running Bazzite) **on** when you switch on an
 **Xbox Series X|S controller**, using a Raspberry Pi **Pico W** or **Pico 2 W**.
@@ -13,19 +13,17 @@ the BC-250's "PC is on" signal (TPMS1 pin 9). The controller still connects to t
 ## Revisions
 | Folder | What it is |
 |---|---|
-| `Rev 1.1/` | **Newest.** Guide Rev 1.1 with realistic renders (R1–R5) of the BC-250 solder points and the ATX 24-pin plug. Firmware unchanged (Rev 1). Also holds the 3D-printed **Pico Shell Rev 1** (fits Pico W and Pico 2 W; works with Rev 1 and Rev 1.1). |
-| `Rev 1/` | First release: firmware Rev 1, guide with drawn BC-250/ATX pictures. |
+| `Rev 1.2/` | **Newest.** Install guide Rev 1.2: two completely separate install options (A: power supply always on, B: Pico switches the power supply), one step per page, a realistic picture for every step, page numbers for each option on the first page. Firmware Rev 1 (unchanged). Includes the 3D-printed Pico Shell. |
+| `Rev 1.1/` | Previous: guide Rev 1.1 with BC-250 / ATX renders, firmware Rev 1, Pico Shell Rev 1. |
 
-Inside each revision folder:
+Inside `Rev 1.2/`:
 | Folder | Contents |
 |---|---|
 | `Firmware/` | `GMX-BC250-Wake_Rev1_PicoW.uf2` (Pico W, RP2040) and `GMX-BC250-Wake_Rev1_Pico2W.uf2` (Pico 2 W, RP2350) |
-| `Docs/` | Build, flash & install guide (PDF) — start here. (Rev 1.1) also `GMX-BC250-Pico-Shell_Rev1_Guide.pdf` (print + assembly) |
-| `Diagrams/` | Wiring / overview / Pico pin pictures (PNG) + editable SVG sources |
-| `Renders/` | (Rev 1.1) Realistic renders of the BC-250 power-button pad, ground pad, TPMS1 pin 9, AUTO_PWRON1 jumper and the ATX 24-pin plug; `Shell_*.png` = Pico shell pictures |
-| `Source/` | Firmware source (Pico SDK 2.2.0 + BTstack) and the scripts that make the diagrams, renders and PDF. (Rev 1.1) `Source/pico-shell/` = CadQuery source for the Pico shell |
-| `STL/` | (Rev 1.1) Pico Shell Rev 1 print files: one shared `Pico-Shell_Base.stl` + 4 lids (GMX-Mods logo, Bazzite, BC-250, Blank) |
-| `STEP/` | (Rev 1.1) Pico Shell Rev 1 CAD files |
+| `Docs/` | Install guide (PDF) — start here, choose Option A or B on page 1. Also the Pico Shell print/assembly guide |
+| `Renders/` | Every step picture (`S_A..` Option A, `S_B..` Option B, others shared) + BC-250 renders R1–R4 + Pico Shell pictures |
+| `STL/`, `STEP/` | Pico Shell enclosure print and CAD files |
+| `Source/` | Firmware source (Pico SDK 2.2.0 + BTstack), Pico Shell source, and the scripts that make the pictures and the guide |
 
 ## Pins (Pico GPIO)
 GP2 power-button MOSFET · GP3 PS_ON MOSFET (Option B) · GP4 PC-on sense · GP5 optional button · GP6 optional LED · VSYS ← +5VSB through a Schottky diode
