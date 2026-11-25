@@ -25,23 +25,19 @@ Inside `Rev 1.2/`:
 | `STL/`, `STEP/` | Pico Shell enclosure print and CAD files |
 | `Source/` | Firmware source (Pico SDK 2.2.0 + BTstack), Pico Shell source, and the scripts that make the pictures and the guide |
 
-## Optional PCB — GMX BC-250 Wake Board Rev 1.0
-`PCB/GMX-BC250-Wake-Board_Rev1.0/` is a small 58 × 43 mm board that replaces the perfboard build.
-The Pico W / Pico 2 W plugs into two 1x20 sockets; BSS138LT1G MOSFETs (Q1, Q2), 1N5819WS diode (D1),
-resistors and the SW1 button are on the board; outside wires solder to six labelled pads (J3–J8).
-Works for Option A and Option B (Option A: Q2, R2 and J5 not needed). Same firmware.
+## Optional PCB — GMX BC-250 Wake Board (+ 3D-printed shell)
+A small board that replaces the perfboard build. The Pico W / Pico 2 W plugs into two 1x20 sockets;
+BSS138LT1G MOSFETs (Q1, Q2), 1N5819WS diode (D1), resistors and the SW1 button are on the board;
+outside wires solder to six labelled pads (J3–J8). Works for Option A and Option B (Option A: Q2, R2 and J5 not needed). Same firmware.
 
-| Folder | Contents |
+| Folder | What it is |
 |---|---|
-| `Gerbers/` | Gerber + drill zip for ordering the bare board (JLCPCB) |
-| `BOM/`, `JLC_BOM/`, `CPL/` | Full parts list; JLCPCB assembly files (SMD parts only) |
-| `ibom/` | Interactive BOM — open in a browser while soldering |
-| `Renders/` | Board pictures: bare, with parts, with the Pico |
-| `Docs/` | Wiring diagrams (Option A, Option B), DRC report, cross-check report |
-| `Firmware/` | Same `.uf2` files as above |
-| `Source/` | KiCad 7 board, footprint libraries, build scripts |
+| `PCB/GMX-BC250-Wake-Board_Rev1.1/` | **Newest.** 70.5 × 43 mm board with 4 × M3 mounting holes, plus the 3D-printed **Wake Board Shell Rev 1** (Base, Button, 4 lids: GMX-Mods, Bazzite, BC-250, Blank) and its print/assembly guide |
+| `PCB/GMX-BC250-Wake-Board_Rev1.0/` | Previous: 58 × 43 mm board, no mounting holes (does not fit the shell) |
 
-> The PCB has **not been ordered or tested yet**. No step-by-step PCB build guide yet — see `README.txt` and the wiring diagrams.
+Inside each PCB folder: `Gerbers/`, `BOM/`, `JLC_BOM/`, `CPL/`, `ibom/`, `Renders/`, `Docs/` (wiring diagrams, reports, shell guide), `Firmware/`, `Source/`; Rev 1.1 also has `STL/` and `STEP/` for the shell.
+
+> The PCB and the shell have **not been ordered, printed or tested yet**.
 
 ## Pins (Pico GPIO)
 GP2 power-button MOSFET · GP3 PS_ON MOSFET (Option B) · GP4 PC-on sense · GP5 optional button · GP6 optional LED · VSYS ← +5VSB through a Schottky diode

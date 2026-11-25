@@ -1,0 +1,21 @@
+Ref,Value,Manufacturer part,Footprint on PCB,LCSC #,Side,Assembly,Note
+D1,1N5819WS,Guangdong Hottech 1N5819WS,SOD-323_L1.8-W1.3-LS2.5-RD,C191023,Top,SMT,+5VSB to Pico VSYS
+J1,Female socket 1x20 2.54mm,ZHOURI PM2.54-1*20,HDR-TH_20P-P2.54-V-F,C5224030,Top,Hand solder,"Pico pins 1-20. Alternative: BOOMELE 2.54-1*20P, C50984"
+J2,Female socket 1x20 2.54mm,ZHOURI PM2.54-1*20,HDR-TH_20P-P2.54-V-F,C5224030,Top,Hand solder,"Pico pins 21-40. Alternative: BOOMELE 2.54-1*20P, C50984"
+Q1,BSS138LT1G,onsemi BSS138LT1G,SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR,C82045,Top,SMT,Presses the BC-250 power button
+Q2,BSS138LT1G,onsemi BSS138LT1G,SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR,C82045,Top,SMT,Option B only: switches the PSU on (PS_ON)
+R1,10k,YAGEO RC0603FR-0710KL,R0603,C98220,Top,SMT,Q1 gate pull-down
+R2,10k,YAGEO RC0603FR-0710KL,R0603,C98220,Top,SMT,Option B only: Q2 gate pull-down
+R3,1k,YAGEO RC0603FR-071KL,R0603,C22548,Top,SMT,Protects the Pico input (PC ON)
+SW1,TS-1187A-B-A-B,XKB Connection TS-1187A-B-A-B,SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5,C318884,Top,SMT,Learn / manual on-off button
+J3,Wire pad,(no part),WirePad_D2.2_Drill1.1,,Top,None,Solder the outside wire here: GND
+J4,Wire pad,(no part),WirePad_D2.2_Drill1.1,,Top,None,Solder the outside wire here: PC ON
+J5,Wire pad,(no part),WirePad_D2.2_Drill1.1,,Top,None,Solder the outside wire here: PS_ON (Option B only)
+J6,Wire pad,(no part),WirePad_D2.2_Drill1.1,,Top,None,Solder the outside wire here: PWR BTN
+J7,Wire pad,(no part),WirePad_D2.2_Drill1.1,,Top,None,Solder the outside wire here: GND
+J8,Wire pad,(no part),WirePad_D2.2_Drill1.1,,Top,None,Solder the outside wire here: +5VSB
+H1,Mounting hole,(no part),MountingHole_3.2mm_M3,,,None,M3 screw into the shell post
+H2,Mounting hole,(no part),MountingHole_3.2mm_M3,,,None,M3 screw into the shell post
+H3,Mounting hole,(no part),MountingHole_3.2mm_M3,,,None,M3 screw into the shell post
+H4,Mounting hole,(no part),MountingHole_3.2mm_M3,,,None,M3 screw into the shell post
+(not on PCB),Raspberry Pi Pico W or Pico 2 W,with male pin headers fitted,,,,Plug in,"Plugs into J1/J2, parts side up, USB end to the right"

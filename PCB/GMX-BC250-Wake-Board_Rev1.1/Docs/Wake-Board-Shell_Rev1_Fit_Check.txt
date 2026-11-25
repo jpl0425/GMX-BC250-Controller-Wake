@@ -1,0 +1,16 @@
+board+Pico model vs Base  : overlap   0.0000 mm^3
+board+Pico model vs Lid   : overlap   0.0000 mm^3
+board+Pico model vs Button: overlap   0.0000 mm^3
+Base vs Lid    overlap 0.0000 mm^3
+Base vs Button overlap 0.0000 mm^3
+Lid vs Button  overlap 0.0000 mm^3
+Lid vs Button pressed 0.5 mm overlap 0.0000 mm^3
+Button lifted 1.2 mm vs Lid (should be >0 = it stops) 0.2974 mm^3
+Clearances: Pico top 19.60, USB top 22.35, roof underside 23.20
+Wire gap in +Y wall: z 8.6 to 14.1 (= 5.5 mm) x 49.0 mm wide
+Wake-Board-Shell_Base.stl              watertight=True 75.3 x 47.8 x 23.2 mm
+Wake-Board-Shell_Button.stl            watertight=True 6.8 x 6.8 x 17.4 mm
+Wake-Board-Shell_Lid_BC-250.stl        watertight=True 75.3 x 47.8 x 10.9 mm
+Wake-Board-Shell_Lid_Bazzite.stl       watertight=True 75.3 x 47.8 x 10.9 mm
+Wake-Board-Shell_Lid_Blank.stl         watertight=True 75.3 x 47.8 x 10.9 mm
+Wake-Board-Shell_Lid_GMX-Mods.stl      watertight=True 75.3 x 47.8 x 10.9 mm
