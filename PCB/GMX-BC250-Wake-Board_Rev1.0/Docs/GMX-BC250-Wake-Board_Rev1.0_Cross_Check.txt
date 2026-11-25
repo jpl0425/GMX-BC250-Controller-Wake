@@ -1,0 +1,55 @@
+PASS  Every PCB footprint is in the full BOM, and nothing extra  (15 refs)
+PASS  D1: LCSC # on PCB = BOM  (C191023)
+PASS  D1: footprint on PCB = BOM  (SOD-323_L1.8-W1.3-LS2.5-RD)
+PASS  J1: LCSC # on PCB = BOM  (C5224030)
+PASS  J1: footprint on PCB = BOM  (HDR-TH_20P-P2.54-V-F)
+PASS  J2: LCSC # on PCB = BOM  (C5224030)
+PASS  J2: footprint on PCB = BOM  (HDR-TH_20P-P2.54-V-F)
+PASS  Q1: LCSC # on PCB = BOM  (C82045)
+PASS  Q1: footprint on PCB = BOM  (SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR)
+PASS  Q2: LCSC # on PCB = BOM  (C82045)
+PASS  Q2: footprint on PCB = BOM  (SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR)
+PASS  R1: LCSC # on PCB = BOM  (C98220)
+PASS  R1: footprint on PCB = BOM  (R0603)
+PASS  R2: LCSC # on PCB = BOM  (C98220)
+PASS  R2: footprint on PCB = BOM  (R0603)
+PASS  R3: LCSC # on PCB = BOM  (C22548)
+PASS  R3: footprint on PCB = BOM  (R0603)
+PASS  SW1: LCSC # on PCB = BOM  (C318884)
+PASS  SW1: footprint on PCB = BOM  (SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5)
+PASS  J3: footprint on PCB = BOM  (WirePad_D2.2_Drill1.1)
+PASS  J4: footprint on PCB = BOM  (WirePad_D2.2_Drill1.1)
+PASS  J5: footprint on PCB = BOM  (WirePad_D2.2_Drill1.1)
+PASS  J6: footprint on PCB = BOM  (WirePad_D2.2_Drill1.1)
+PASS  J7: footprint on PCB = BOM  (WirePad_D2.2_Drill1.1)
+PASS  J8: footprint on PCB = BOM  (WirePad_D2.2_Drill1.1)
+PASS  JLC BOM holds exactly the SMT parts  (D1,Q1,Q2,R1,R2,R3,SW1)
+PASS  Q1: JLC BOM LCSC/footprint = full BOM
+PASS  R2: JLC BOM LCSC/footprint = full BOM
+PASS  R1: JLC BOM LCSC/footprint = full BOM
+PASS  R3: JLC BOM LCSC/footprint = full BOM
+PASS  D1: JLC BOM LCSC/footprint = full BOM
+PASS  SW1: JLC BOM LCSC/footprint = full BOM
+PASS  Q2: JLC BOM LCSC/footprint = full BOM
+PASS  CPL holds exactly the SMT parts
+PASS  Q1: CPL position/rotation = PCB  (132.60,-113.50 rot 270.0)
+PASS  R2: CPL position/rotation = PCB  (121.70,-114.00 rot 90.0)
+PASS  R1: CPL position/rotation = PCB  (129.90,-114.00 rot 90.0)
+PASS  R3: CPL position/rotation = PCB  (116.20,-113.00 rot 90.0)
+PASS  D1: CPL position/rotation = PCB  (154.00,-104.80 rot 180.0)
+PASS  SW1: CPL position/rotation = PCB  (108.50,-114.00 rot 0.0)
+PASS  Q2: CPL position/rotation = PCB  (124.40,-113.50 rot 270.0)
+PASS  ibom lists every BOM part (wire pads excluded)
+PASS  R1: ibom LCSC = BOM  (C98220)
+PASS  R2: ibom LCSC = BOM  (C98220)
+PASS  R3: ibom LCSC = BOM  (C22548)
+PASS  D1: ibom LCSC = BOM  (C191023)
+PASS  SW1: ibom LCSC = BOM  (C318884)
+PASS  Q1: ibom LCSC = BOM  (C82045)
+PASS  Q2: ibom LCSC = BOM  (C82045)
+PASS  J1: ibom LCSC = BOM  (C5224030)
+PASS  J2: ibom LCSC = BOM  (C5224030)
+PASS  Drill file hole count = PCB pads + vias  (65 holes = 46 pads + 19 vias)
+PASS  Gerber zip has every layer JLCPCB needs
+
+53 passed, 0 failed

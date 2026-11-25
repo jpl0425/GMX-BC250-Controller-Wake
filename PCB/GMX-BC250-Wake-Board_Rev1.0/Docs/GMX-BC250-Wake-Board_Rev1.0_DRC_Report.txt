@@ -1,0 +1,10 @@
+** Drc report for GMX-BC250-Wake-Board_Rev1.0.kicad_pcb **
+** Created on 2026-11-24 16:06:15 **
+
+** Found 0 DRC violations **
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

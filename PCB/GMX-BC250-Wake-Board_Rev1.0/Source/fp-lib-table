@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "GMX_BC250")(type "KiCad")(uri "${KIPRJMOD}/lib/GMX_BC250.pretty")(options "")(descr "GMX BC-250 wake board footprints (LCSC/EasyEDA official land patterns)"))
+  (lib (name "GMX_Logo")(type "KiCad")(uri "${KIPRJMOD}/lib/GMX_Logo.pretty")(options "")(descr "GMX Mods Grumbly logo"))
+)
